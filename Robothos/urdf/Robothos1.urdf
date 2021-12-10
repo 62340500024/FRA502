@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robothos">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0054793288106294 2.22044604925031E-16 0.16112620717465"
+        rpy="0 0 0" />
+      <mass
+        value="214.814323345553" />
+      <inertia
+        ixx="32.4352051215854"
+        ixy="4.70506417266849E-15"
+        ixz="-0.0916703954274556"
+        iyy="31.1191399535227"
+        iyz="-4.77995641936505E-15"
+        izz="53.1488606049937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Wheel_left_Link">
+    <inertial>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="16.4933614313464" />
+      <inertia
+        ixx="0.312686643802609"
+        ixy="1.99285111871448E-15"
+        ixz="-7.88860905221012E-31"
+        iyy="0.597884351886308"
+        iyz="5.05961013827149E-18"
+        izz="0.312686643802609" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Wheel_left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Wheel_left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_left_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_left_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="30"
+      velocity="30" />
+  </joint>
+  <link
+    name="Wheel_Right_Link">
+    <inertial>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="16.4933614313464" />
+      <inertia
+        ixx="0.312686643802609"
+        ixy="-3.44543386923911E-18"
+        ixz="0"
+        iyy="0.597884351886308"
+        iyz="-4.86688591109368E-32"
+        izz="0.312686643802609" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Wheel_Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.5 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Wheel_Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_Right_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.5 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_Right_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="30"
+      velocity="30" />
+  </joint>
+  <link
+    name="Raser_Link">
+    <inertial>
+      <origin
+        xyz="0.520249999999986 -4.88498130835069E-15 0.491666666666686"
+        rpy="0 0 0" />
+      <mass
+        value="0.359999999999999" />
+      <inertia
+        ixx="0.000874999999999992"
+        ixy="-9.1569505478691E-19"
+        ixz="-4.12499999999913E-05"
+        iyy="0.000611157499999991"
+        iyz="3.46021933140531E-19"
+        izz="0.000336157499999998" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Raser_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robothos/meshes/Raser_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Raser_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Raser_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
